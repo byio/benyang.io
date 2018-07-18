@@ -3,6 +3,12 @@ import Typist from 'react-typist';
 
 class TextEditor extends Component {
 
+  parseText = (props) => {
+    return props.map(line => {
+      return <p>> {line}</p>
+    });
+  }
+
   render () {
     return (
       <div>
@@ -12,7 +18,7 @@ class TextEditor extends Component {
             hideWhenDoneDelay: 0
           }}
         >
-          <span>> {this.props.text}</span>
+          {this.parseText(this.props.text)}
         </Typist>
       </div>
     );
