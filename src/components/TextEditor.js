@@ -13,8 +13,10 @@ class TextEditor extends Component {
     return (
       <div>
         <Typist
+          avgTypingDelay={90}
+          stdTypingDelay={75}
           cursor={{
-            hideWhenDone: true,
+            hideWhenDone: false,
             hideWhenDoneDelay: 0
           }}
         >
