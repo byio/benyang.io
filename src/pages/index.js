@@ -1,13 +1,8 @@
 import React from 'react';
 
 import TextEditor from '../components/TextEditor';
-
-const MESSAGES = [
-  'hi! i\'m a web developer.',
-  'i build fullstack apps with javascript.',
-  'welcome to my digital abode :)',
-];
+import intro from '../assets/intro.js';
 
 export default () => (
-  <TextEditor text={MESSAGES} />
+  <TextEditor text={intro} />
 );

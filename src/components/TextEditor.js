@@ -14,10 +14,9 @@ class TextEditor extends Component {
       <div>
         <Typist
           avgTypingDelay={90}
-          stdTypingDelay={75}
+          stdTypingDelay={50}
           cursor={{
-            hideWhenDone: false,
-            hideWhenDoneDelay: 0
+            show: false,
           }}
         >
           {this.parseText(this.props.text)}
