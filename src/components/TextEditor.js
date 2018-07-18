@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import Typist from 'react-typist';
 
+import styles from './TextEditor.module.css';
+
 class TextEditor extends Component {
 
   parseText = (props) => {
     return props.map(line => {
-      return <p>> {line}</p>
+      return <p style={{color:'#fffafa'}}>> {line}</p>
     });
   }
 
   render () {
     return (
-      <div>
+      <div className={styles.texteditor}>
         <Typist
           avgTypingDelay={90}
           stdTypingDelay={50}

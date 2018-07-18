@@ -1,0 +1,35 @@
+.texteditor {
+  position: relative;
+  height: 16rem;
+  width: 16rem;
+  background: #000000;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.texteditor::after {
+  position: absolute;
+  content: '';
+  bottom: -1rem;
+  right: -1rem;
+  z-index: -1;
+  height: 110%;
+  width: 110%;
+  margin: 0 auto;
+  filter: blur(1.75rem);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: animateGlow 5s ease infinite;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
