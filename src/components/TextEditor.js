@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Typist from 'react-typist';
 
 class TextEditor extends Component {
   render () {
     return (
-      <div>TextEditor component</div>
+      <div>
+        <Typist>hello world</Typist>
+      </div>
     );
   }
 }
