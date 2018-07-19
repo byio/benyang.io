@@ -6,10 +6,14 @@ import styles from './TextEditor.module.css';
 class TextEditor extends Component {
 
   parseText = (props) => {
-    return props.map(line => {
-      return <p key={line} style={{color:'#fffafa'}}>> {line}
+    return props.map(line => (
+      <p
+        key={line}
+        style={{color:'#fffafa'}}
+      >
+        > {line}
       </p>
-    });
+    ));
   }
 
   render () {
