@@ -8,6 +8,8 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@material-ui/core": "^1.4.0",
+    "@material-ui/icons": "^1.1.0",
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.40",
     "react-typist": "^2.0.4"
