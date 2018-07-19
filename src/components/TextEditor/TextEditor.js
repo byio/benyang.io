@@ -7,7 +7,8 @@ class TextEditor extends Component {
 
   parseText = (props) => {
     return props.map(line => {
-      return <p style={{color:'#fffafa'}}>> {line}</p>
+      return <p key={line} style={{color:'#fffafa'}}>> {line}
+      </p>
     });
   }
 
