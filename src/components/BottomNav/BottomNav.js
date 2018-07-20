@@ -7,7 +7,11 @@ import WorkIcon from '@material-ui/icons/Work';
 import AboutIcon from '@material-ui/icons/PersonPin';
 import ContactIcon from '@material-ui/icons/RingVolume';
 
-import styles from './BottomNav.module.css';
+const styles = {
+  root: {
+    backgroundColor: '#000000',
+  }
+};
 
 class BottomNav extends Component {
   constructor () {
@@ -22,12 +26,14 @@ class BottomNav extends Component {
   };
 
   render () {
+    const { classes } = this.props;
     const { value } = this.state;
 
     return (
       <BottomNavigation
         value={ value }
         onChange={this.handleChange}
+        className={classes.root}
       >
         <BottomNavigationAction
           label="Home"
@@ -54,4 +60,4 @@ class BottomNav extends Component {
   }
 }
 
-export default BottomNav;
+export default withStyles(styles)(BottomNav);
