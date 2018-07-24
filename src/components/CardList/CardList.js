@@ -6,6 +6,7 @@ const CardList = ({ works }) => {
   const renderCards = works.map((work, i) => {
     return (
       <Card
+        key={works[i].id}
         imgURL={works[i].imgURL}
         title={works[i].title}
         description={works[i].description}

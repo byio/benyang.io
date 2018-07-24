@@ -9,6 +9,7 @@ import MoreIcon from '@material-ui/icons/ExpandMore';
 import { works } from '../../assets/works';
 
 const Card = ({
+  id,
   imgURL,
   title,
   description,
