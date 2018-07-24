@@ -3,7 +3,7 @@ import React from 'react';
 const SearchBox = () => {
   return (
     <div>
-      SearchBox component
+      <input type="search" />
     </div>
   );
 };
