@@ -6,6 +6,7 @@ import LiveIcon from '@material-ui/icons/LiveTv';
 import ContactIcon from '@material-ui/icons/RingVolume';
 import MoreIcon from '@material-ui/icons/ExpandMore';
 
+import styles from './Card.module.css';
 import { works } from '../../assets/works';
 
 const Card = ({
@@ -16,31 +17,33 @@ const Card = ({
   githubURL,
   liveURL
 }) => (
-  <div>
+  <div className={styles.wrapper}>
     {/* image */}
     <img key="" alt="" src={imgURL}/>
     {/* description */}
     <div>
       <h2>{title}</h2>
+      <MoreIcon />
       <p>{description}</p>
     </div>
     {/* interactions */}
-    <div>
-      <LikeIcon />
+    <div className={styles.iconBar}>
+      <LikeIcon className={styles.sideMargins} />
       <a
+        className={styles.sideMargins}
         href={githubURL}
         target="_blank"
       >
         <CodeIcon />
       </a>
       <a
+        className={styles.sideMargins}
         href={liveURL}
         target="_blank"
       >
         <LiveIcon />
       </a>
-      <ContactIcon />
-      <MoreIcon />
+      <ContactIcon className={styles.sideMargins} />
     </div>
   </div>
 );
