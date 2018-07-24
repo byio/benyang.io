@@ -20,10 +20,14 @@ class Portfolio extends Component {
   }
 
   render () {
+    const filteredWorks = this.state.works.filter(work => {
+      return work.keywords.includes(this.state.searchText.toLowerCase());
+    });
+
     return (
       <div>
         <SearchBox searchChange={this.onSearchChange} />
-        <CardList works={works} />
+        <CardList works={filteredWorks} />
       </div>
     );
   }
