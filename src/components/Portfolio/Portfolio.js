@@ -13,10 +13,16 @@ class Portfolio extends Component {
     };
   }
 
+  onSearchChange = (event) => {
+    this.setState({
+      searchText: event.target.value
+    });
+  }
+
   render () {
     return (
       <div>
-        <SearchBox />
+        <SearchBox searchChange={this.onSearchChange} />
         <CardList works={works} />
       </div>
     );
