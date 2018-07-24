@@ -8,26 +8,33 @@ import MoreIcon from '@material-ui/icons/ExpandMore';
 
 import { works } from '../../assets/works';
 
-const Card = () => (
+const Card = ({
+  id,
+  imgURL,
+  title,
+  description,
+  githubURL,
+  liveURL
+}) => (
   <div>
     {/* image */}
-    <img key="" alt="" src={works[0].imgURL}/>
+    <img key="" alt="" src={imgURL}/>
     {/* description */}
     <div>
-      <h2>{works[0].title}</h2>
-      <p>{works[0].description}</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
     {/* interactions */}
     <div>
       <LikeIcon />
       <a
-        href={works[0].githubURL}
+        href={githubURL}
         target="_blank"
       >
         <CodeIcon />
       </a>
       <a
-        href={works[0].liveURL}
+        href={liveURL}
         target="_blank"
       >
         <LiveIcon />
